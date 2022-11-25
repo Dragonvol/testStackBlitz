@@ -1,5 +1,3 @@
-import { Data } from "@angular/router";
-
 export class Human{
   protected id!:number;
   protected name!: string;

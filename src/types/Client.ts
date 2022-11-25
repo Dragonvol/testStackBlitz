@@ -1,18 +1,50 @@
-import { Car } from "./Car";
 import { Human } from "./Human";
 
-// -kliencie- unikalny numer, imię, nazwisko, adres, telefon, lista wypożyczonych samochodów;
+// -kliencie- unikalny numer, imię, nazwisko, adres, telefon, id_samochody, data wypożyczenia, ...);
 export class Client extends Human{
-  //private cars : Array<> | null;to do
+  private carId : number;
+  private startDate: Date;//data wypożyczenia
+  private expectedtime: number;//oczekiwany czas zwrotu w dniach - normalna kwota
+  private extendedTime: number;//przekroczony czas -normalna kwota *1,5
+  private currentlyRenting: boolean;//
   constructor( id:number, name:string, surname:string, address:string, pNumber:number){
     super(id,name,surname,address,pNumber);
-    // this.cars=null;
+    this.carId=0;;
+    this.startDate=new Date;
+    this.expectedtime=0;
+    this.extendedTime=0;
+    this.currentlyRenting=false;
   }
-  // public getCars():Car | null{
-  //   return this.cars;
-  // }
+  get CarId():number{
+    return this.carId;
+  }
 
-  // public AddCar(car:Car){
-  //   this.cars=car;
-  // }
+  set CarId(carId:number){
+    this.carId=carId;
+  }
+  get StartDate():Date{
+    return this.startDate;
+  }
+  set StartDate(startDate:Date){
+    this.startDate=startDate;
+  }
+  get ExpectedTime():number{
+    return this.expectedtime;
+  }
+  set ExpectedTime(expectedtime:number){
+    this.expectedtime=expectedtime;
+  }
+  get ExtendedTime():number{
+    return this.extendedTime;
+  }
+  set ExtendedTime(expectedtime:number){
+    this.expectedtime=expectedtime;
+  }
+  get CurrentlyRenting():boolean{
+    return this.currentlyRenting;
+  }
+  set CurrentlyRenting(currentlyRenting:boolean){
+    this.currentlyRenting=currentlyRenting;
+  }
 }
+

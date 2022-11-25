@@ -1,25 +1,15 @@
-import { Data } from "@angular/router";
 import { Human } from "./Human";
 
-// -pracowniku- imię,  nazwisko, data urodzenia, adres, telefon,pensja;
+// -pracowniku- unikalny numer, imię, nazwisko, adres, telefon, pensja, login, haslo;
 export class Worker extends Human{
-  private birthDate! : Data;
   private salary! : number;
   private login! : string;
   private password! : string;
-  constructor( id:number, name:string, surname:string, address:string, pNumber:number, birthDate: Data, salary:number, login:string, password:string){
+  constructor( id:number, name:string, surname:string, address:string, pNumber:number, salary:number, login:string, password:string){
     super(id,name,surname,address,pNumber);
-    this.birthDate = birthDate;
     this.salary = salary;
     this.login = login;
     this.password = password;
-  }
-  get BirthDate():Data{
-    return this.birthDate;
-  }
-
-  set BirthDate(birthDate:Data){
-    this.birthDate=birthDate;
   }
   get Salary():number{
     return this.salary;

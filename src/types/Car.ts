@@ -1,15 +1,12 @@
-import { Data } from "@angular/router";
-
-// -samochodzie- marka, model, cena za dobę, rok produkcji, przebieg, cena zakupu, czy samochód jest uszkodzony.
+// -samochodzie- id, marka, model, cena za dobę, rok produkcji,  cena zakupu, czy samochód jest dostępny.
 export class Car{
   private id!:number;
   private brand!: string;
   private model!:string;
   private pricePerDay!:number;
-  private prodData!: Data;
+  private prodData!: Date;
   private puschare!: number;
-  private state!: boolean;
-  private available!: boolean;
+  private available: boolean=true;
 
   constructor(...args:Array<any>)
   {
@@ -17,16 +14,14 @@ export class Car{
       const Cpy = args[0];
       Object.assign(this, Cpy);
     }
-    else if (args.length == 8) {
-      const id = args[0], brand = args[1],  model = args[2], pricePerDay = args[3], prodData = args[4], puschare = args[5], state = args[6], available = args[7];
+    else if (args.length == 6) {
+      const id = args[0], brand = args[1],  model = args[2], pricePerDay = args[3], prodData = args[4], puschare = args[5];
       this.id = id;
       this.brand = brand;
       this.model = model;
       this.pricePerDay = pricePerDay;
       this.prodData = prodData;
       this.puschare = puschare;
-      this.state = state;
-      this.available = available;
     }
   }
   get Id():number{
@@ -58,11 +53,11 @@ export class Car{
   set PricePerDay(pricePerDay:number){
     this.pricePerDay=pricePerDay;
   }
-  get ProdData():Data{
+  get ProdData():Date{
     return this.prodData;
   }
 
-  set ProdData(prodData:Data){
+  set ProdData(prodData:Date){
     this.prodData=prodData;
   }
   get Puschare():number{
@@ -71,13 +66,6 @@ export class Car{
 
   set Puschare(puschare:number){
     this.puschare=puschare;
-  }
-  get State():boolean{
-    return this.state;
-  }
-
-  set State(state:boolean){
-    this.state=state;
   }
   get Available():boolean{
     return this.available;
