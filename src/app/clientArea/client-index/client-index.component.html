@@ -1,0 +1,34 @@
+<h1>List of Clients:</h1>
+
+<table>
+  <thead>
+      <tr>
+          <th>
+              ID
+          </th>
+          <th>
+              Name
+          </th>
+          <th>
+              Surname
+          </th>
+          <th>
+              Address
+          </th>
+          <th>
+              Phone Number
+          </th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients;">
+      <td>{{client.Id}}</td>
+      <td>{{client.Name}}</td>
+      <td>{{client.Surname}}</td>
+      <td>{{client.Address}}</td>
+      <td>{{client.PNumber}}</td>
+    </tr>
+  <tbody>
+</table>
+
+<app-client-create></app-client-create>
