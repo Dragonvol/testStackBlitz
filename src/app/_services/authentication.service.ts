@@ -5,12 +5,12 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { environment } from 'src/environments/environment';
-import { User } from '../_models/user';
+import { Worker } from '../_models/Worker';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-  private userSubject: BehaviorSubject<User | null>;
-  public user: Observable<User | null>;
+  private userSubject: BehaviorSubject<Worker | null>;
+  public user: Observable<Worker | null>;
 
   constructor(
     private router: Router,

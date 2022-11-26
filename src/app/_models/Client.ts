@@ -7,9 +7,9 @@ export class Client extends Human{
   private expectedtime: number;//oczekiwany czas zwrotu w dniach - normalna kwota
   private extendedTime: number;//przekroczony czas -normalna kwota *1,5
   private currentlyRenting: boolean;//
-  constructor( id:number, name:string, surname:string, address:string, pNumber:number){
-    super(id,name,surname,address,pNumber);
-    this.carId=0;;
+  constructor( id:number, firstName:string, lastName:string, address:string, pNumber:number){
+    super(id,firstName,lastName,address,pNumber);
+    this.carId=0;
     this.startDate=new Date;
     this.expectedtime=0;
     this.extendedTime=0;

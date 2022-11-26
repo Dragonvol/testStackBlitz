@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Client } from 'src/types/Client';
 
 @Component({
   selector: 'app-client-create',
@@ -12,8 +11,8 @@ export class ClientCreateComponent implements OnInit {
 
   constructor() {
     this.createForm= new FormGroup({
-      name: new FormControl('',Validators.required),
-      surname: new FormControl('',Validators.required),
+      firstname: new FormControl('',Validators.required),
+      lastname: new FormControl('',Validators.required),
       address: new FormControl('',Validators.required),
       pnumber: new FormControl('',[Validators.min(100000000),Validators.required])
     });

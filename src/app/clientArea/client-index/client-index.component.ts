@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Client } from 'src/types/Client';
+import { Client } from 'src/app/_models/Client';
 
 @Component({
   selector: 'app-client-index',
