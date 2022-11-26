@@ -1,16 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.angular",
     "\\src",
     "\\src\\app",
     "\\src\\app\\clients",
-    "\\src\\app\\home",
-    "\\src\\app\\login",
-    "\\src\\app\\_helper",
-    "\\src\\app\\_models",
     "\\src\\app\\_services",
-    "\\src\\environments"
+    "\\src\\types"
   ],
-  "SelectedNode": "\\src\\app\\home\\index.ts",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
