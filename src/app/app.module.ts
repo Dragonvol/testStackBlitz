@@ -13,6 +13,9 @@ import { JwtInterceptor, ErrorInterceptor } from './_helper';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 
+import { ClientIndexComponent } from './clientArea/client-index/client-index.component';
+import { ClientCreateComponent } from "./clientArea/client-create/client-create.component";
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -23,7 +26,9 @@ import { LoginComponent } from './login';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ClientIndexComponent,
+    ClientCreateComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
