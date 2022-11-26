@@ -1,0 +1,34 @@
+<p>client-create works!</p>
+<div>
+  <form [formGroup]="createForm">
+    <label>Name: </label><br>
+    <input type="text" formControlName="name"><br>
+    <div *ngIf="name?.touched" style="color: red">
+      <small *ngIf="name?.errors?.['required']" >Name is required</small>
+    </div>
+    <label>Surname: </label><br>
+    <input type="text" formControlName="surname"><br>
+    <div *ngIf="surname?.touched"  style="color: red">
+      <small *ngIf="surname?.errors?.['required']">Surname is required</small>
+    </div>
+    <!-- <div *ngIf="surname.errors?.['required']" style="color: red">
+      Surname is required.
+    </div>
+    <div *ngIf="surname.errors?.['minlength']" style="color: red">
+      Name min length is {{surname.errors?.['minlength']['requiredLength']}}.
+    </div>-->
+    <label>Address: </label><br>
+    <input type="text" formControlName="address"><br>
+    <div *ngIf="address?.touched" style="color: red">
+      <small *ngIf="address?.errors?.['required']">Addres is required</small>
+    </div>
+    <label>Phone number: </label><br>
+    <input type="number" formControlName="pnumber"><br>
+    <div *ngIf="pnumber?.touched" style="color: red">
+      <small *ngIf="pnumber?.errors?.['min']"> Incorrect number ex.: 123456789</small>
+      <small *ngIf="pnumber?.errors?.['required']">Phone number is required</small>
+    </div>
+    <input type="submit" (click)="onSubmit()"  value="Save">
+    <div *ngIf="!createForm.valid">Fulfill form</div>
+  </form>
+</div>

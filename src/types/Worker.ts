@@ -2,9 +2,9 @@ import { Human } from "./Human";
 
 // -pracowniku- unikalny numer, imię, nazwisko, adres, telefon, pensja, login, haslo;
 export class Worker extends Human{
-  private salary! : number;
-  private login! : string;
-  private password! : string;
+  private salary : number;
+  private login : string;
+  private password : string;
   constructor( id:number, name:string, surname:string, address:string, pNumber:number, salary:number, login:string, password:string){
     super(id,name,surname,address,pNumber);
     this.salary = salary;
